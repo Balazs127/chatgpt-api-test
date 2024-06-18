@@ -1,4 +1,4 @@
-export const fetchChatGPTResponse = async (prompt) => {
+export const fetchChatGPTResponse = async () => {
     // Mock response for testing
     return new Promise((resolve) => {
         setTimeout(() => {

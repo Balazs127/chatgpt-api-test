@@ -1,5 +1,5 @@
-import React, { useState, useEffect, useRef } from 'react';
-import { fetchChatGPTResponse } from './api';
+import { useState, useEffect, useRef } from 'react';
+import { fetchChatGPTResponse } from '../../api';
 
 const InterviewComponent = () => {
     const [questions, setQuestions] = useState([]);
@@ -13,8 +13,8 @@ const InterviewComponent = () => {
     useEffect(() => {
         const fetchQuestions = async () => {
             try {
-                const prompt = "Generate a series of 10 interview questions for a student to practice answering.";
-                const result = await fetchChatGPTResponse(prompt);
+                //const prompt = "Generate a series of 10 interview questions for a student to practice answering.";
+                const result = await fetchChatGPTResponse();
                 if (result.choices && result.choices.length > 0) {
                     const questionList = result.choices[0].message.content.split('\n').filter(q => q).map((q) => q.replace(/^\d+\.\s*/, ''));
                     setQuestions(questionList);
