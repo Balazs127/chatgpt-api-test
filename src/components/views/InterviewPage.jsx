@@ -1,6 +1,6 @@
 import "./InterviewPage.scss";
 import { useState } from 'react';
-import InterviewComponent from "../layout/InterviewComponent";
+import InterviewComponent from "../layout/InterviewComponent.jsx";
 
 function InterviewPage () {
 
@@ -12,11 +12,17 @@ function InterviewPage () {
 
     return (
         <div>
-            <h1>Welcome to the Interview Practice App</h1>
-            <p>Click the button below to receive a series of 10 interview questions from the AI.</p>
-            {!startInterview ? (
-                <button onClick={handleStartInterview}>Start Interview</button>
-            ) : null}
+            <div className='interview-header'>
+                <h1>Interview Simulator</h1>
+                <p>
+                    Welcome to the interview Simulator!
+                    <br />
+                    To get started please select how many questions this interview will have.
+                </p>
+                {!startInterview ? (
+                    <button onClick={handleStartInterview} className='start-button'>START INTERVIEW</button>
+                ) : null}
+            </div>
             {startInterview && <InterviewComponent />}
         </div>
     );

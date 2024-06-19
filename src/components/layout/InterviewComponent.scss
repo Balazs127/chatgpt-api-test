@@ -1,0 +1,167 @@
+.interview-container {
+    background-color: grey;
+    padding: 10px;
+    border-radius: 5px;
+    max-width: 600px;
+    margin: 0 auto; // Centers the container
+
+    h2 {
+        padding: 10px;
+        max-width: 600px;
+        font-size: 16px;
+        background-color: #4caf50;
+        color: white;
+        border: 2px solid #ccc;
+        border-radius: 5px;
+        margin: 0px;
+        margin-bottom: 10px;
+        cursor: pointer;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        &:hover {
+        background-color: #45a049;
+        }
+    }
+}
+
+h2, .load {
+    text-align: center;
+}
+
+.chat-container {
+    border: 2px solid #ccc;
+    border-radius: 10px;
+    padding: 10px;
+    max-height: 400px;
+    height: fit-content;
+    overflow-y: auto;
+    background-color: #f9f9f9;
+
+
+    /* Custom Scrollbar Styling */
+    scrollbar-width: medium; /* For Firefox */
+    scrollbar-color: #b6b6b6 transparent; /* For Firefox */
+
+    &::-webkit-scrollbar {
+        width: 20px; /* Width of the scrollbar */
+    }
+
+    &::-webkit-scrollbar-track {
+        background: transparent;
+        border-radius: 10px; /* Round the track */
+    }
+
+    &::-webkit-scrollbar-thumb {
+        background-color: #b6b6b6; /* Color of the thumb */
+        border-radius: 10px; /* Round the thumb */
+        border: 2px solid transparent; /* Add some space around the thumb */
+        background-clip: content-box; /* Show the border */
+    }
+}
+
+.chat-message-wrapper {
+    margin: 3px 0;
+
+    &.user {
+        .message-content {
+            justify-content: right;
+        }
+        
+        .message-label {
+            text-align: right;
+        }
+    }
+}
+
+.message-label {
+    font-weight: bold;
+    font-size: 14px;
+}
+
+.message-content {
+    display: flex;
+
+    .user-icon,
+    .interviewer-icon {
+        margin-bottom: 7px;
+        align-self: flex-end; // Ensure the icons align at the bottom
+    }
+}
+
+.chat-message {
+    padding: 10px;
+    margin: 5px 0;
+    border-radius: 10px;
+    max-width: 70%;
+    width: fit-content;
+    word-wrap: break-word;
+
+    &.interviewer {
+        color:#f9f9f9;
+        background-color: #409445;
+        border-bottom-left-radius: 0px;
+    }
+
+    &.user {
+        color:#f9f9f9;
+        background-color: #2471ff;
+        border-bottom-right-radius: 0px;
+    }
+}
+
+.interviewer-icon {
+    width: 18px; 
+    height: 18px;
+    margin-right: 10px;
+}
+
+.user-icon {
+    width: 18px; 
+    height: 18px;
+    margin-left: 10px;
+}
+
+.chat-input-wrapper {
+    display: flex;
+    flex-direction: center;
+    margin-top: 10px;
+
+    textarea {
+        flex-grow: 1;
+        padding: 10px;
+        font-size: 16px;
+        border: 2px solid #ccc;
+        border-radius: 5px;
+        margin-right: 10px;
+        resize: vertical;
+        min-height: 36px; // Ensure the height is consistent
+    }
+
+    button {
+        height: 60px; // Match the height of the textarea
+        width: 60px;
+        padding: 10px;
+        font-size: 16px;
+        background-color: #4caf50;
+        color: white;
+        border: 2px solid #ccc;
+        border-radius: 5px;
+        cursor: pointer;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        &:hover {
+        background-color: #409445;
+        }
+
+        svg {
+            width: 18px; 
+            height: 18px;
+        }
+    }
+}

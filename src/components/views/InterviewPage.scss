@@ -1,58 +1,10 @@
 /* src/InterviewPage.scss */
-.chat-container {
-    border: 1px solid #ccc;
-    padding: 10px;
-    max-height: 400px;
-    height: 400px;
-    overflow-y: auto;
-    background-color: #f9f9f9;
-    margin-bottom: 10px;
-    display: flex;
-    flex-direction: column;
-  }
-  
-  .chat-message {
-    padding: 10px;
-    margin: 5px 0;
-    border-radius: 10px;
-    max-width: 70%;
-    
-    &.interviewer {
-      background-color: #e1f5fe;
-      align-self: flex-start;
-    }
-    
-    &.user {
-      background-color: #c8e6c9;
-      align-self: flex-end;
-    }
-  }
-  
-  .chat-input {
-    display: flex;
-    flex-direction: column;
-  
-    textarea {
-      padding: 10px;
-      font-size: 16px;
-      border: 1px solid #ccc;
-      border-radius: 5px;
-      margin-bottom: 10px;
-      resize: vertical;
-    }
-  
-    button {
-      padding: 10px;
-      font-size: 16px;
-      background-color: #4caf50;
-      color: white;
-      border: none;
-      border-radius: 5px;
-      cursor: pointer;
-  
-      &:hover {
-        background-color: #45a049;
-      }
-    }
-  }
-  
+h1 {
+  text-align: center;
+}
+
+.interview-header {
+  max-width: 600px;
+  margin: 0 auto; // Centers the container
+  padding: 20px; // Optional: adds some padding
+}
